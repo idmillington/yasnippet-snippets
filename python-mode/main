@@ -2,5 +2,17 @@
 # name: main
 # key: main
 # --
-def main():
+def run(args):
     $0
+
+def get_argument_parser():
+    parser = argparse.ArgumentParser()
+    return parser
+
+def main():
+    parser = get_argument_parser()
+    args = parser.parse_args()
+    run(args)
+
+if __name__ == '__main__':
+    main()
